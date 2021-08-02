@@ -1,0 +1,10 @@
+com\business\discografia\model\Artista.class
+com\business\discografia\dao\AlbumRowMapper.class
+com\business\discografia\controller\AlbumController.class
+com\business\discografia\HelloServlet.class
+com\business\discografia\service\AlbumServiceImpl.class
+com\business\discografia\service\AlbumService.class
+com\business\discografia\dao\AlbumDao.class
+com\business\discografia\model\Canzone.class
+com\business\discografia\dao\AlbumDaoImpl.class
+com\business\discografia\model\Album.class
