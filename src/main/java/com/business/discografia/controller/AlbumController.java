@@ -22,7 +22,7 @@ public class AlbumController {
 
         albumService.addAlbum(album);
 
-        return new ModelAndView("Inserito", "Titolo", album.getTitolo());
+        return new ModelAndView("Added", "Titolo", album.getTitolo());
     }
 
     @RequestMapping(value = "/modifyAlbumById", method = RequestMethod.PATCH)
@@ -32,7 +32,7 @@ public class AlbumController {
 
         albumService.modifyAlbumById(id, album);
 
-        return new ModelAndView("Modificato", "Album", HttpStatus.ACCEPTED);
+        return new ModelAndView("Modified", "Album", HttpStatus.ACCEPTED);
     }
 
     @RequestMapping(value = "/modifyAlbumByName", method = RequestMethod.PATCH)
@@ -42,7 +42,7 @@ public class AlbumController {
 
         albumService.modifyAlbumByName(name, album);
 
-        return new ModelAndView("Modificato", "Album", HttpStatus.ACCEPTED);
+        return new ModelAndView("Modified", "Album", HttpStatus.ACCEPTED);
     }
 
     @RequestMapping(value = "/deleteAlbumById", method = RequestMethod.DELETE)
@@ -50,7 +50,7 @@ public class AlbumController {
 
         albumService.deleteAlbumById(id);
 
-        return new ModelAndView("Cancellato", "Album", HttpStatus.ACCEPTED);
+        return new ModelAndView("Deleted", "Album", HttpStatus.ACCEPTED);
     }
 
     @RequestMapping(value = "/deleteAlbumByName", method = RequestMethod.DELETE)
@@ -58,7 +58,7 @@ public class AlbumController {
 
         albumService.deleteAlbumByName(name);
 
-        return new ModelAndView("Cancellato", "Album", HttpStatus.ACCEPTED);
+        return new ModelAndView("Deleted", "Album", HttpStatus.ACCEPTED);
     }
 
     @RequestMapping(value = "/getAlbums", method = RequestMethod.GET)
@@ -90,7 +90,7 @@ public class AlbumController {
 
         albumService.getAlbumsByGenre(genere);
 
-        return new ModelAndView("Lista album per genere", "Album", HttpStatus.ACCEPTED);
+        return new ModelAndView("Lista_genere", "Album", HttpStatus.ACCEPTED);
     }
 
     @RequestMapping(value = "/getAlbumsByArtist", method = RequestMethod.GET)
@@ -98,7 +98,7 @@ public class AlbumController {
 
         albumService.getAlbumsByArtist(artista);
 
-        return new ModelAndView("Lista album per artista", "Album", HttpStatus.ACCEPTED);
+        return new ModelAndView("Lista_artista", "Album", HttpStatus.ACCEPTED);
     }
 
     @RequestMapping(value = "/getAlbumsByYear", method = RequestMethod.GET)
@@ -106,7 +106,7 @@ public class AlbumController {
 
         albumService.getAlbumsByYear(anno);
 
-        return new ModelAndView("Lista album per anno", "Album", HttpStatus.ACCEPTED);
+        return new ModelAndView("Lista_anno", "Album", HttpStatus.ACCEPTED);
     }
 
 }
