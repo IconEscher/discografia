@@ -1,6 +1,7 @@
 package com.business.discografia.service;
 
 import com.business.discografia.model.Album;
+import com.business.discografia.model.Canzone;
 
 import java.util.List;
 
@@ -28,4 +29,7 @@ public interface AlbumService {
     public List<Album> getAlbumsByGenre(String genere);
     public List<Album> getAlbumsByArtist(String artista);
     public List<Album> getAlbumsByYear(int anno);
+
+    //Mostrare la lista di canzoni di un album
+    public List<Canzone> showSongs(int idAlbum);
 }
