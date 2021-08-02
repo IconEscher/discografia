@@ -25,7 +25,7 @@ public class AlbumController {
         return new ModelAndView("Inserito", "Titolo", album.getTitolo());
     }
 
-    @RequestMapping(value = "/modifyAlbum", method = RequestMethod.PATCH)
+    @RequestMapping(value = "/modifyAlbumById", method = RequestMethod.PATCH)
     public ModelAndView modifyAlbumById(int id, Album album) {
 
         System.out.println(album);
@@ -35,7 +35,7 @@ public class AlbumController {
         return new ModelAndView("Modificato", "Album", HttpStatus.ACCEPTED);
     }
 
-    @RequestMapping(value = "/modifyAlbum", method = RequestMethod.PATCH)
+    @RequestMapping(value = "/modifyAlbumByName", method = RequestMethod.PATCH)
     public ModelAndView modifyAlbumByName(String name, Album album) {
 
         System.out.println(album);
@@ -45,7 +45,7 @@ public class AlbumController {
         return new ModelAndView("Modificato", "Album", HttpStatus.ACCEPTED);
     }
 
-    @RequestMapping(value = "/deleteAlbum", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/deleteAlbumById", method = RequestMethod.DELETE)
     public ModelAndView deleteAlbumById(int id) {
 
         albumService.deleteAlbumById(id);
@@ -53,7 +53,7 @@ public class AlbumController {
         return new ModelAndView("Cancellato", "Album", HttpStatus.ACCEPTED);
     }
 
-    @RequestMapping(value = "/deleteAlbum", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/deleteAlbumByName", method = RequestMethod.DELETE)
     public ModelAndView deleteAlbumByName(String name) {
 
         albumService.deleteAlbumByName(name);
@@ -69,7 +69,7 @@ public class AlbumController {
         return new ModelAndView("Lista", "Album", HttpStatus.ACCEPTED);
     }
 
-    @RequestMapping(value = "/getAlbum", method = RequestMethod.GET)
+    @RequestMapping(value = "/getAlbumById", method = RequestMethod.GET)
     public ModelAndView getAlbumById(int id) {
 
         albumService.getAlbumById(id);
@@ -77,7 +77,7 @@ public class AlbumController {
         return new ModelAndView("Album", "Album", HttpStatus.ACCEPTED);
     }
 
-    @RequestMapping(value = "/getAlbum", method = RequestMethod.GET)
+    @RequestMapping(value = "/getAlbumByName", method = RequestMethod.GET)
     public ModelAndView getAlbumByName(String name) {
 
         albumService.getAlbumByName(name);
@@ -85,7 +85,7 @@ public class AlbumController {
         return new ModelAndView("Album", "Album", HttpStatus.ACCEPTED);
     }
 
-    @RequestMapping(value = "/getAlbums", method = RequestMethod.GET)
+    @RequestMapping(value = "/getAlbumsByGenre", method = RequestMethod.GET)
     public ModelAndView getAlbumsByGenre(String genere) {
 
         albumService.getAlbumsByGenre(genere);
@@ -93,7 +93,7 @@ public class AlbumController {
         return new ModelAndView("Lista album per genere", "Album", HttpStatus.ACCEPTED);
     }
 
-    @RequestMapping(value = "/getAlbums", method = RequestMethod.GET)
+    @RequestMapping(value = "/getAlbumsByArtist", method = RequestMethod.GET)
     public ModelAndView getAlbumsByArtist(String artista) {
 
         albumService.getAlbumsByArtist(artista);
@@ -101,7 +101,7 @@ public class AlbumController {
         return new ModelAndView("Lista album per artista", "Album", HttpStatus.ACCEPTED);
     }
 
-    @RequestMapping(value = "/getAlbums", method = RequestMethod.GET)
+    @RequestMapping(value = "/getAlbumsByYear", method = RequestMethod.GET)
     public ModelAndView getAlbumsByYear(int anno) {
 
         albumService.getAlbumsByYear(anno);
