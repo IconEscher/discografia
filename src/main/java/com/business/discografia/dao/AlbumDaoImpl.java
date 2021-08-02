@@ -1,9 +1,11 @@
 package com.business.discografia.dao;
 
 import com.business.discografia.model.Album;
+import com.business.discografia.model.Canzone;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -26,22 +28,41 @@ public class AlbumDaoImpl implements AlbumDao {
 
     @Override
     public Album modifyAlbumById(int id, Album album) {
-        return null;
+        String sql = "UPDATE album " +
+                "SET idalbum = " + id +
+                ", Titolo = '"  + album.getTitolo() +
+                "', Durata = " + album.getDurata() +
+                ", Genere = '" + album.getGenere() +
+                "', artista = '" + album.getArtista() +
+                "', Anno = " + album.getAnno() +
+                "WHERE idalbum = " + id + ";";
+
+        return album;
     }
 
     @Override
     public Album modifyAlbumByName(String name, Album album) {
-        return null;
+        String sql = "UPDATE album " +
+                "SET Titolo = '"  + name +
+                "', Durata = " + album.getDurata() +
+                ", Genere = '" + album.getGenere() +
+                "', artista = '" + album.getArtista() +
+                "', Anno = " + album.getAnno() +
+                "WHERE Titolo = " + name + ";";
+
+        return album;
     }
 
     @Override
     public int deleteAlbumById(int id) {
-        return 0;
+        String sql = "DELETE FROM album WHERE idalbum = " + id;
+        return jdbcTemplate.update(sql);
     }
 
     @Override
     public int deleteAlbumByName(String name) {
-        return 0;
+        String sql = "DELETE FROM album WHERE Titolo = " + name;
+        return jdbcTemplate.update(sql);
     }
 
     @Override
@@ -81,6 +102,24 @@ public class AlbumDaoImpl implements AlbumDao {
         List<Album> albums = jdbcTemplate.query(sql, new AlbumRowMapper());
         return albums;
     }
+
+    @Override
+    public List<Canzone> showSongs(int idAlbum) {
+        String sql = "SELECT * FROM canzone c" +
+                "JOIN canzone c ON a.idalbum=c.idalbum " +
+                "WHERE a.idalbum = " + idAlbum;
+        List<Canzone> canzoni = jdbcTemplate.query(sql, new RowMapper<Canzone>() {
+            @Override
+            public Canzone mapRow(ResultSet rs, int i) throws SQLException {
+                Canzone canzone = new Canzone();
+                canzone.setTitolo(rs.getString("titolo"));
+                canzone.setDurata(rs.getFloat("Durata"));
+
+                return canzone;
+            }
+        });
+                return canzoni;
+    }
 }
 
 class AlbumRowMapper implements RowMapper<Album> {
@@ -98,4 +137,6 @@ class AlbumRowMapper implements RowMapper<Album> {
         return album;
 
     }
+
+
 }

@@ -1,6 +1,7 @@
 package com.business.discografia.dao;
 
 import com.business.discografia.model.Album;
+import com.business.discografia.model.Canzone;
 
 import java.util.List;
 
@@ -29,5 +30,7 @@ public interface AlbumDao {
     public List<Album> getAlbumsByArtist(String artista);
     public List<Album> getAlbumsByYear(int anno);
 
+    // Visualizzare le canzoni appartenenti a un album
+    public List<Canzone> showSongs(int idAlbum);
 
 }

@@ -2,6 +2,7 @@ package com.business.discografia.service;
 
 import com.business.discografia.dao.AlbumDao;
 import com.business.discografia.model.Album;
+import com.business.discografia.model.Canzone;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -64,5 +65,9 @@ public class AlbumServiceImpl implements AlbumService {
     @Override
     public List<Album> getAlbumsByYear(int anno) {
         return albumDao.getAlbumsByYear(anno);
+    }
+
+    public List<Canzone> showSongs(int idAlbum) {
+        return albumDao.showSongs(idAlbum);
     }
 }

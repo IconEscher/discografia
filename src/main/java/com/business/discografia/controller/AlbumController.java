@@ -109,4 +109,12 @@ public class AlbumController {
         return new ModelAndView("Lista_anno", "Album", HttpStatus.ACCEPTED);
     }
 
+    @RequestMapping(value = "/getSongsByAlbum", method = RequestMethod.GET)
+    public ModelAndView showSongs(int idAlbum) {
+
+        albumService.showSongs(idAlbum);
+
+        return new ModelAndView("Canzoni", "Album", HttpStatus.ACCEPTED);
+    }
+
 }
