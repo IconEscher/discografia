@@ -7,7 +7,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.List;
 
 @Controller
 public class AlbumController {
@@ -22,7 +25,7 @@ public class AlbumController {
 
         albumService.addAlbum(album);
 
-        return new ModelAndView("Added", "Titolo", album.getTitolo());
+        return new ModelAndView("/album.jsp", "album", album.getTitolo());
     }
 
     @RequestMapping(value = "/modifyAlbumById", method = RequestMethod.PATCH)
@@ -61,12 +64,17 @@ public class AlbumController {
         return new ModelAndView("Deleted", "Album", HttpStatus.ACCEPTED);
     }
 
-    @RequestMapping(value = "/getAlbums", method = RequestMethod.GET)
+    @RequestMapping(value = "/getAlbums.jsp", method = RequestMethod.GET)
     public ModelAndView getAlbums() {
 
-        albumService.getAlbums();
+        ModelAndView mav = new ModelAndView("getAlbums");
 
-        return new ModelAndView("Lista", "Album", HttpStatus.ACCEPTED);
+        List<Album> list = albumService.getAlbums();
+        mav.addObject("albums", list);
+
+        return mav;
+
+       // return new ModelAndView("album", "Album", albumService.getAlbums());
     }
 
     @RequestMapping(value = "/getAlbumById", method = RequestMethod.GET)
@@ -74,7 +82,7 @@ public class AlbumController {
 
         albumService.getAlbumById(id);
 
-        return new ModelAndView("Album", "Album", HttpStatus.ACCEPTED);
+        return new ModelAndView("/album.jsp", "album", HttpStatus.ACCEPTED);
     }
 
     @RequestMapping(value = "/getAlbumByName", method = RequestMethod.GET)
@@ -82,7 +90,7 @@ public class AlbumController {
 
         albumService.getAlbumByName(name);
 
-        return new ModelAndView("Album", "Album", HttpStatus.ACCEPTED);
+        return new ModelAndView("/album.jsp", "album", HttpStatus.ACCEPTED);
     }
 
     @RequestMapping(value = "/getAlbumsByGenre", method = RequestMethod.GET)

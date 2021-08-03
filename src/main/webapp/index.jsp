@@ -11,8 +11,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="resources/css/bootstrap.css">
 
-
-
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -34,8 +32,8 @@
                         Album
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="album.jsp">Cerca album</a></li>
+                        <li><a class="dropdown-item" href="getAlbums.jsp">getAlbums</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
@@ -52,7 +50,7 @@
     </div>
 </nav>
 
-<div style="text-align: center;">
+<center>
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -74,7 +72,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-</div>
+</center>
 <div style="text-align: center;"> <h1>Discografie di artisti</h1> </div>
 <!--<center><button onclick="myFunction()"> Clicca</button>
     <p id="demo"></p>
