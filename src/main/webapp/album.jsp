@@ -1,3 +1,4 @@
+<jsp:useBean id="album" scope="request" type="javax.sql.DataSource"/>
 <html>
 <head>
 
@@ -83,6 +84,7 @@
         $("#btnGenerate").click(function () {
             //Build an array containing Customer records.
             var customers = new Array();
+            customers.push(${album})
             customers.push(["Customer Id", "Name", "Country"]);
             customers.push([1, "John Hammond", "United States"]);
             customers.push([2, "Mudassar Khan", "India"]);

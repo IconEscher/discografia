@@ -33,7 +33,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="album.jsp">Cerca album</a></li>
-                        <li><a class="dropdown-item" href="getAlbums.jsp">getAlbums</a></li>
+                        <li><a class="dropdown-item" href="${pageContext.request.contextPath}/getAlbums">getAlbums</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>

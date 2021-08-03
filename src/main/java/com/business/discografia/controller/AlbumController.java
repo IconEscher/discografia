@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.View;
 
 import java.util.List;
 
@@ -64,17 +65,20 @@ public class AlbumController {
         return new ModelAndView("Deleted", "Album", HttpStatus.ACCEPTED);
     }
 
-    @RequestMapping(value = "/getAlbums.jsp", method = RequestMethod.GET)
+    @RequestMapping (value = "/getAlbums", method = RequestMethod.GET)
+    @ResponseBody
     public ModelAndView getAlbums() {
 
-        ModelAndView mav = new ModelAndView("getAlbums");
+        System.out.println("In getAlbums");
+
+        ModelAndView mav = new ModelAndView("getAlbums", "Album", Album.class);
 
         List<Album> list = albumService.getAlbums();
-        mav.addObject("albums", list);
+        mav.addObject("album", list);
+
+        System.out.println(mav);
 
         return mav;
-
-       // return new ModelAndView("album", "Album", albumService.getAlbums());
     }
 
     @RequestMapping(value = "/getAlbumById", method = RequestMethod.GET)
