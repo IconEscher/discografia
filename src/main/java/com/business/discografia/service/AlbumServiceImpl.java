@@ -58,7 +58,7 @@ public class AlbumServiceImpl implements AlbumService {
     }
 
     @Override
-    public List<Album> getAlbumsByArtist(String artista) {
+    public List<Album> getAlbumsByArtist(int artista) {
         return albumDao.getAlbumsByArtist(artista);
     }
 

@@ -27,7 +27,7 @@ public interface AlbumDao {
 
     // Visualizzare lista degli album per TAG
     public List<Album> getAlbumsByGenre(String genere);
-    public List<Album> getAlbumsByArtist(String artista);
+    public List<Album> getAlbumsByArtist(int artista);
     public List<Album> getAlbumsByYear(int anno);
 
     // Visualizzare le canzoni appartenenti a un album

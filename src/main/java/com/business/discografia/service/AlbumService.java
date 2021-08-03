@@ -27,7 +27,7 @@ public interface AlbumService {
 
     // Visualizzare lista degli album per TAG
     public List<Album> getAlbumsByGenre(String genere);
-    public List<Album> getAlbumsByArtist(String artista);
+    public List<Album> getAlbumsByArtist(int artista);
     public List<Album> getAlbumsByYear(int anno);
 
     //Mostrare la lista di canzoni di un album

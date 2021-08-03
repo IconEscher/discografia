@@ -21,8 +21,9 @@ public class AlbumDaoImpl implements AlbumDao {
     public int addAlbum(Album album) {
         String sql = "insert into album values (?,?,?,?,?)";
         return jdbcTemplate.update(sql, new Object[] {album.getTitolo(),
-                album.getArtista(),
+                album.getDurata(),
                 album.getGenere(),
+                album.getArtista(),
                 album.getAnno()});
     }
 
@@ -61,7 +62,7 @@ public class AlbumDaoImpl implements AlbumDao {
 
     @Override
     public int deleteAlbumByName(String name) {
-        String sql = "DELETE FROM album WHERE Titolo = " + name;
+        String sql = "DELETE FROM album WHERE Titolo = '" + name + "'";
         return jdbcTemplate.update(sql);
     }
 
@@ -86,19 +87,21 @@ public class AlbumDaoImpl implements AlbumDao {
 
     @Override
     public List<Album> getAlbumsByGenre(String genere) {
-        String sql = "SELECT * FROM album WHERE Genere = " + genere;
+        String sql = "SELECT * FROM album WHERE Genere = '" + genere + "'";
         List<Album> albums = jdbcTemplate.query(sql, new AlbumRowMapper());
         return albums;
     }
 
     @Override
-    public List<Album> getAlbumsByArtist(String artista) {
-        return null;
+    public List<Album> getAlbumsByArtist(int artista) {
+        String sql = "SELECT * FROM album WHERE artista = '" + artista + "'";
+        List<Album> albums = jdbcTemplate.query(sql, new AlbumRowMapper());
+        return albums;
     }
 
     @Override
     public List<Album> getAlbumsByYear(int anno) {
-        String sql = "SELECT * FROM album WHERE Genere = " + anno;
+        String sql = "SELECT * FROM album WHERE Anno = " + anno;
         List<Album> albums = jdbcTemplate.query(sql, new AlbumRowMapper());
         return albums;
     }
