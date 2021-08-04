@@ -104,107 +104,16 @@
            alert('ciao sono un messaggio');
        </script> -->
 </div>
-<table class="table table-dark">
-    <tr>
-        <th style="text-align: center;"><h2>Album</h2></th>
-        <th style="text-align: center;"><h2>Artista</h2></th>
-        <th style="text-align: center;"><h2>Brani</h2> </th>
-    </tr>
-    <tr>
-        <th><div style="text-align: center;"><p>Scenes from a memory</p></div>
-            <div style="text-align: center;"><a href="https://dreamtheater.net/discography/metropolis-pt-2/" alt="Album Dream Theater" target="_blank"> <img id="film" src="${pageContext.request.contextPath}/resources/image/metropolispart2.jpg" width="300" height="300"></a></div> </th>
-        </th>
-        <th>
-            <div style="text-align: center;"><p>Dream Theater</p></div>
-            <div style="text-align: center;">  <a href="https://dreamtheater.net/" alt="Dream Theater" target="_self"> <img src="${pageContext.request.contextPath}/resources/image/dreamtheater.jpg" width="300" height="300"></a> </div>
-        </th>
-        <th>
-            <div style="text-align: center;"><p>Brani</p></div>
-            <ol>
-                <li>Scene One: Regression</li>
-                <li>Scene Two: I. Ouverture 1928</li>
-                <li>Scene Two: II. Strange Déja Vu</li>
-                <li>Scene Three: I. Through My Words</li>
-                <li>Scene Three: II. Fatal Tragedy</li>
-                <li>Scene Four: Beyond This Life</li>
-                <li>Scene Five: I. Through Her Eyes</li>
-                <li>Scene Six: Home</li>
-                <li>Scene Seven: I. The Dance Of Eternity</li>
-                <li>Scene Seven: II. One Last Time</li>
-                <li>Scene Eight: The Spirit Carries On</li>
-                <li>Scene Nine: Finally Free</li>
-            </ol>
-        </th>
-    </tr>
-    <!--
-    <tr>
-        <th><center><p>Scenes from a memory</p></center>
-            <center><a href="https://dreamtheater.net/discography/metropolis-pt-2/" alt="Album Dream Theater" target="_blank"> <img id="film" src="image/metropolispart2.jpg" width="300" height="300"></a></center> </th>
-        </th>
-        <th>
-            <center><p>Dream Theater</p></center>
-            <center>  <a href="https://dreamtheater.net/" alt="Dream Theater" target="_self"> <img src="image/dreamtheater.jpg" width="300" height="300"></a> </center>
-        </th>
-        <th>
-            <center><p>Brani</p></center>
-            <ol>
-                <li>Scene One: Regression</li>
-                <li>Scene Two: I. Ouverture 1928</li>
-                <li>Scene Two: II. Strange Déja Vu</li>
-                <li>Scene Three: I. Through My Words</li>
-                <li>Scene Three: II. Fatal Tragedy</li>
-                <li>Scene Four: Beyond This Life</li>
-                <li>Scene Five: I. Through Her Eyes</li>
-                <li>Scene Six: Home</li>
-                <li>Scene Seven: I. The Dance Of Eternity</li>
-                <li>Scene Seven: II. One Last Time</li>
-                <li>Scene Eight: The Spirit Carries On</li>
-                <li>Scene Nine: Finally Free</li>
-            </ol>
-        </th>
-    </tr>
--->
-</table>
-<div class="accordion" id="accordionExample">
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Accordion Item #1
-            </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-        </div>
+<br>
+<br>
+<br>
+<footer class="bg-dark text-center text-white">
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright
     </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Accordion Item #2
-            </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-        </div>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Accordion Item #3
-            </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-        </div>
-    </div>
-</div>
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
+    <!-- Copyright -->
+</footer>
 </body>
 </html>
