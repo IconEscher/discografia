@@ -33,20 +33,17 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="album.jsp">Cerca album</a></li>
-                        <li><a class="dropdown-item" href="${pageContext.request.contextPath}/getAlbums">getAlbums</a></li>
+                        <li><a class="dropdown-item" href="${pageContext.request.contextPath}/getAlbums">Ricerca Album</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="getAlbum/3">Get album id</a></li>
 
                         <li><a class="dropdown-item" href="InserisciAlbum.jsp">Inserisci album</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Chi siamo</a>
-                </li>
+                
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+             <form action="login.html">
+                <button type="submit" class="btn btn-black">Login</button>
             </form>
         </div>
     </div>
@@ -76,35 +73,15 @@
     </div>
 </center>
 <div style="text-align: center;"> <h1>Discografie di artisti</h1> </div>
-<!--<center><button onclick="myFunction()"> Clicca</button>
-    <p id="demo"></p>
 
-    <div id="divprincipale" style="width: 100px; height: 100px; background-color: green; position: absolute;"></div>-->
-<br>
-<br>
-<!-- <button id="tasto1"> </button>
- <script>
-     function myFunction(){
-     document.getElementById("demo").innerHTML =" Questo è un codice esempio";}
-
- </script> </center>
-<center> <video width="320" height="240" autoplay muted>
-     <source src="media/video.mp4" type="video/mp4">
-     Your browser does not support the video tag.
-</video> </center>-->
 <p style="text-align: center;"><i>Benvenuti, amanti della musica! <br>
     In questa pagina troverete tutte le informazioni sui vostri artisti preferiti e la loro discografia!</i></p>
 
 <div style="text-align: center;">
-    <!-- <center> <img src="image/img2.jpg" width="400" height="400"> </center>-->
+   
     <p><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quidem ad tempora, voluptates architecto magnam tenetur, exercitationem animi nulla in sed expedita corrupti dolore aperiam, doloribus laudantium provident dolor veniam?</i></p>
 
-    <!--<button type="button" onclick="alert('bottone premuto')"> Premi qui</button>-->
-
-    <!-- quello in seguito è un codice javascript di default per un errore-->
-    <!--   <script>
-           alert('ciao sono un messaggio');
-       </script> -->
+   
 </div>
 <br>
 <br>
