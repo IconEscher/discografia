@@ -20,10 +20,10 @@ public class AlbumDaoImpl implements AlbumDao {
     @Override
     public int addAlbum(Album album) {
         String sql = "insert into album values (?,?,?,?,?)";
-        return jdbcTemplate.update(sql, new Object[] {album.getTitolo(),
+        return jdbcTemplate.update(sql, new Object[] {album.getArtista(),
+                album.getTitolo(),
                 album.getDurata(),
                 album.getGenere(),
-                album.getArtista(),
                 album.getAnno()});
     }
 
@@ -55,15 +55,15 @@ public class AlbumDaoImpl implements AlbumDao {
     }
 
     @Override
-    public int deleteAlbumById(int id) {
+    public void deleteAlbumById(int id) {
         String sql = "DELETE FROM album WHERE idalbum = " + id;
-        return jdbcTemplate.update(sql);
+        jdbcTemplate.update(sql);
     }
 
     @Override
-    public int deleteAlbumByName(String name) {
+    public void deleteAlbumByName(String name) {
         String sql = "DELETE FROM album WHERE Titolo = '" + name + "'";
-        return jdbcTemplate.update(sql);
+        jdbcTemplate.update(sql);
     }
 
     @Override
@@ -108,9 +108,8 @@ public class AlbumDaoImpl implements AlbumDao {
 
     @Override
     public List<Canzone> showSongs(int idAlbum) {
-        String sql = "SELECT * FROM canzone c" +
-                "JOIN canzone c ON a.idalbum=c.idalbum " +
-                "WHERE a.idalbum = " + idAlbum;
+        String sql = "SELECT * FROM canzone c " +
+                "WHERE idalbum = " + idAlbum;
         List<Canzone> canzoni = jdbcTemplate.query(sql, new RowMapper<Canzone>() {
             @Override
             public Canzone mapRow(ResultSet rs, int i) throws SQLException {

@@ -10,11 +10,13 @@
     <script src="resources/js/script1.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="resources/css/bootstrap.css">
-
+    <meta http-equiv="refresh" content="3; URL=/">
 
 </head>
 <body>
-
+<script>
+    alert("Album cancellato con successo");
+</script>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Cerca</a>
@@ -73,154 +75,3 @@
         </button>
     </div>
 </center>
-<center> <h1>Album</h1> </center>
-<br>
-<br>
-<br>
-<!--Tabella album per la getAlbum-->
-<table class="table table-dark">
-    <thead>
-    <div class="row align-items-start; border border-5">
-        <div class="col">
-            <center>Titolo</center>
-        </div>
-        <div class="col">
-            <center>Artista</center>
-        </div>
-        <div class="col">
-            <center>Durata</center>
-        </div>
-        <div class="col">
-            <center>Genere</center>
-        </div>
-        <div class="col">
-            <center>Anno</center>
-        </div>
-    </div>
-    </thead>
-    <tbody>
-    <tr class="border border-5">
-        <td>
-            <center>Titolo album</center>
-        </td>
-
-        <td>
-            <center>Artista album</center>
-        </td>
-
-        <td>
-            <center>Durata dell'album</center>
-        </td>
-
-        <td>
-            <center>Genere album</center>
-        </td>
-        <td>
-            <center>Anno dell'album</center>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <center>${album.get(0).titolo}</center>
-        </td>
-
-        <td>
-            <center>${album.get(0).artista}</center>
-        </td>
-
-        <td>
-            <center>${album.get(0).durata}</center>
-        </td>
-
-        <td>
-            <center>${album.get(0).genere}</center>
-        </td>
-        <td>
-            <center>${album.get(0).anno}</center>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <center>${album.get(1).titolo}</center>
-        </td>
-
-        <td>
-            <center>${album.get(1).artista}</center>
-        </td>
-
-        <td>
-            <center>${album.get(1).durata}</center>
-        </td>
-
-        <td>
-            <center>${album.get(1).genere}</center>
-        </td>
-        <td>
-            <center>${album.get(1).anno}</center>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <center>${album.get(2).titolo}</center>
-        </td>
-
-        <td>
-            <center>${album.get(2).artista}</center>
-        </td>
-
-        <td>
-            <center>${album.get(2).durata}</center>
-        </td>
-
-        <td>
-            <center>${album.get(2).genere}</center>
-        </td>
-        <td>
-            <center>${album.get(2).anno}</center>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <center>${album.get(3).titolo}</center>
-        </td>
-
-        <td>
-            <center>${album.get(3).artista}</center>
-        </td>
-
-        <td>
-            <center>${album.get(3).durata}</center>
-        </td>
-
-        <td>
-            <center>${album.get(3).genere}</center>
-        </td>
-        <td>
-            <center>${album.get(3).anno}</center>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <center>${album.get(4).titolo}</center>
-        </td>
-
-        <td>
-            <center>${album.get(4).artista}</center>
-        </td>
-
-        <td>
-            <center>${album.get(4).durata}</center>
-        </td>
-
-        <td>
-            <center>${album.get(4).genere}</center>
-        </td>
-        <td>
-            <center>${album.get(4).anno}</center>
-        </td>
-    </tr>
-    </tbody>
-</table>
-
-</body>
-</html>

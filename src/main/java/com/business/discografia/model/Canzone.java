@@ -2,7 +2,7 @@ package com.business.discografia.model;
 
 public class Canzone {
 
-    private int ID;
+    private int idcanzone;
     private String titolo;
     private float durata;
 
@@ -14,18 +14,18 @@ public class Canzone {
         this.durata = durata;
     }
 
-    public Canzone(int ID, String titolo, float durata) {
-        this.ID = ID;
+    public Canzone(int idcanzone, String titolo, float durata) {
+        this.idcanzone = idcanzone;
         this.titolo = titolo;
         this.durata = durata;
     }
 
-    public int getID() {
-        return ID;
+    public int getIdcanzone() {
+        return idcanzone;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setID(int idcanzone) {
+        this.idcanzone = idcanzone;
     }
 
     public String getTitolo() {
@@ -47,7 +47,7 @@ public class Canzone {
     @Override
     public String toString() {
         return "Canzone{" +
-                "ID=" + ID +
+                "idcanzone=" + idcanzone +
                 ", titolo='" + titolo + '\'' +
                 ", durata=" + durata +
                 '}';

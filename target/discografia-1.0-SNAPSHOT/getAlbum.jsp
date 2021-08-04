@@ -1,20 +1,15 @@
 <html>
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Albums</title>
-    <meta name="description" content="Trova Album">
+    <meta charset="UTF-8">
+    <title>getAlbum</title>
+    <meta name="description" content="Pagina contenente gli album degli artisti">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="resources/js/bootstrap.bundle.js" type="text/javascript"></script>
+    <script src="resources/js/bootstrap.bundle.js" type="text/javascript" ></script>
     <script src="resources/js/script1.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="resources/css/bootstrap.css">
-
-
 </head>
 <body>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Cerca</a>
@@ -34,8 +29,8 @@
                         Album
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Cerca Album</a></li>
-                        <li><a class="dropdown-item" href="getAlbum.jsp">getAlbum</a></li>
+                        <li><a class="dropdown-item" href="InserisciAlbum.html">Inserisci Album</a></li>
+                        <li><a class="dropdown-item" href="getAlbum.html">getAlbum</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -54,13 +49,13 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="resources/image/dreamtheater.jpg" class="d-block w-50" alt="dream theater band">
+                <img src="image/dreamtheater.jpg" class="d-block w-50" alt="dream theater band">
             </div>
             <div class="carousel-item">
-                <img src="resources/image/queen.jpg" class="d-block w-60" alt="...">
+                <img src="image/queen.jpg" class="d-block w-60" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="resources/image/Led-Zeppelin.jpg" class="d-block w-60" alt="...">
+                <img src="image/Led-Zeppelin.jpg" class="d-block w-60" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -80,25 +75,25 @@
 <!--Tabella album per la getAlbum-->
 <table class="table table-dark">
     <thead>
-    <div class="row align-items-start; border border-5">
-        <div class="col">
-            <center>Titolo</center>
+        <div class="row align-items-start; border border-5">
+            <div class="col">
+                <center>Titolo</center>
+            </div>
+            <div class="col">
+                <center>Artista</center>
+            </div>
+            <div class="col">
+                <center>Durata</center>
+            </div>
+            <div class="col">
+                <center>Genere</center>
+            </div>
+            <div class="col">
+                <center>Anno</center>
+            </div>
         </div>
-        <div class="col">
-            <center>Artista</center>
-        </div>
-        <div class="col">
-            <center>Durata</center>
-        </div>
-        <div class="col">
-            <center>Genere</center>
-        </div>
-        <div class="col">
-            <center>Anno</center>
-        </div>
-    </div>
     </thead>
-    <tbody>
+    <tbody >
     <tr class="border border-5">
         <td>
             <center>Titolo album</center>
@@ -115,112 +110,58 @@
         <td>
             <center>Genere album</center>
         </td>
+
         <td>
             <center>Anno dell'album</center>
         </td>
     </tr>
-    <tr>
-        <td>
-            <center>${album.get(0).titolo}</center>
-        </td>
 
-        <td>
-            <center>${album.get(0).artista}</center>
-        </td>
-
-        <td>
-            <center>${album.get(0).durata}</center>
-        </td>
-
-        <td>
-            <center>${album.get(0).genere}</center>
-        </td>
-        <td>
-            <center>${album.get(0).anno}</center>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <center>${album.get(1).titolo}</center>
-        </td>
-
-        <td>
-            <center>${album.get(1).artista}</center>
-        </td>
-
-        <td>
-            <center>${album.get(1).durata}</center>
-        </td>
-
-        <td>
-            <center>${album.get(1).genere}</center>
-        </td>
-        <td>
-            <center>${album.get(1).anno}</center>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <center>${album.get(2).titolo}</center>
-        </td>
-
-        <td>
-            <center>${album.get(2).artista}</center>
-        </td>
-
-        <td>
-            <center>${album.get(2).durata}</center>
-        </td>
-
-        <td>
-            <center>${album.get(2).genere}</center>
-        </td>
-        <td>
-            <center>${album.get(2).anno}</center>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <center>${album.get(3).titolo}</center>
-        </td>
-
-        <td>
-            <center>${album.get(3).artista}</center>
-        </td>
-
-        <td>
-            <center>${album.get(3).durata}</center>
-        </td>
-
-        <td>
-            <center>${album.get(3).genere}</center>
-        </td>
-        <td>
-            <center>${album.get(3).anno}</center>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <center>${album.get(4).titolo}</center>
-        </td>
-
-        <td>
-            <center>${album.get(4).artista}</center>
-        </td>
-
-        <td>
-            <center>${album.get(4).durata}</center>
-        </td>
-
-        <td>
-            <center>${album.get(4).genere}</center>
-        </td>
-        <td>
-            <center>${album.get(4).anno}</center>
-        </td>
-    </tr>
     </tbody>
 </table>
+<br>
+<br>
+<br>
+<br>
+<!--questa è la seconda tabella, vedi quale preferisci-->
+<div class="container">
+    <div class="row align-items-start; border border-5">
+        <div class="col">
+          <center>Titolo</center>
+        </div>
+        <div class="col">
+            <center>Artista</center>
+        </div>
+        <div class="col">
+           <center>Durata</center>
+        </div>
+        <div class="col">
+            <center>Genere</center>
+        </div>
+        <div class="col">
+            <center>Anno</center>
+        </div>
+    </div>
 
+    <div class="row align-items-end">
+        <div class="col">
+            Titolo album
+        </div>
+        <div class="col">
+            Artista album
+        </div>
+        <div class="col">
+            Durata dell'album
+        </div>
+        <div class="col">
+            Genere album
+        </div>
+        <div class="col">
+            One of three columns
+        </div>
+        <div class="col">
+            Anno dell'album
+        </div>
+    </div>
+</div>
 </body>
 </html>

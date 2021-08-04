@@ -35,7 +35,9 @@
                         <li><a class="dropdown-item" href="album.jsp">Cerca album</a></li>
                         <li><a class="dropdown-item" href="${pageContext.request.contextPath}/getAlbums">getAlbums</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="getAlbum/3">Get album id</a></li>
+
+                        <li><a class="dropdown-item" href="InserisciAlbum.jsp">Inserisci album</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">

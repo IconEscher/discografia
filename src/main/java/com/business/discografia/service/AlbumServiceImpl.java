@@ -28,13 +28,13 @@ public class AlbumServiceImpl implements AlbumService {
     }
 
     @Override
-    public int deleteAlbumById(int id) {
-        return albumDao.deleteAlbumById(id);
+    public void deleteAlbumById(int id) {
+        albumDao.deleteAlbumById(id);
     }
 
     @Override
-    public int deleteAlbumByName(String name) {
-        return albumDao.deleteAlbumByName(name);
+    public void deleteAlbumByName(String name) {
+        albumDao.deleteAlbumByName(name);
     }
 
     @Override

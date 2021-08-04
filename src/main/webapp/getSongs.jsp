@@ -3,8 +3,8 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Albums</title>
-    <meta name="description" content="Trova Album">
+    <title>Songs</title>
+    <meta name="description" content="Trova Canzoni">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="resources/js/bootstrap.bundle.js" type="text/javascript"></script>
     <script src="resources/js/script1.js" type="text/javascript"></script>
@@ -82,141 +82,47 @@
     <thead>
     <div class="row align-items-start; border border-5">
         <div class="col">
+            <center>ID</center>
+        </div>
+        <div class="col">
             <center>Titolo</center>
         </div>
         <div class="col">
-            <center>Artista</center>
-        </div>
-        <div class="col">
             <center>Durata</center>
-        </div>
-        <div class="col">
-            <center>Genere</center>
-        </div>
-        <div class="col">
-            <center>Anno</center>
         </div>
     </div>
     </thead>
     <tbody>
     <tr class="border border-5">
         <td>
-            <center>Titolo album</center>
-        </td>
-
-        <td>
-            <center>Artista album</center>
-        </td>
-
-        <td>
-            <center>Durata dell'album</center>
-        </td>
-
-        <td>
-            <center>Genere album</center>
+            <center>Titolo della canzone</center>
         </td>
         <td>
-            <center>Anno dell'album</center>
+            <center>Durata della canzone</center>
         </td>
     </tr>
     <tr>
         <td>
-            <center>${album.get(0).titolo}</center>
-        </td>
-
-        <td>
-            <center>${album.get(0).artista}</center>
-        </td>
-
-        <td>
-            <center>${album.get(0).durata}</center>
-        </td>
-
-        <td>
-            <center>${album.get(0).genere}</center>
+            <center>${songs.get(0).titolo}</center>
         </td>
         <td>
-            <center>${album.get(0).anno}</center>
+            <center>${songs.get(0).durata}</center>
         </td>
     </tr>
     <tr>
         <td>
-            <center>${album.get(1).titolo}</center>
-        </td>
-
-        <td>
-            <center>${album.get(1).artista}</center>
-        </td>
-
-        <td>
-            <center>${album.get(1).durata}</center>
-        </td>
-
-        <td>
-            <center>${album.get(1).genere}</center>
+            <center>${songs.get(1).titolo}</center>
         </td>
         <td>
-            <center>${album.get(1).anno}</center>
+            <center>${songs.get(1).durata}</center>
         </td>
     </tr>
     <tr>
         <td>
-            <center>${album.get(2).titolo}</center>
-        </td>
-
-        <td>
-            <center>${album.get(2).artista}</center>
-        </td>
-
-        <td>
-            <center>${album.get(2).durata}</center>
-        </td>
-
-        <td>
-            <center>${album.get(2).genere}</center>
+            <center>${songs.get(2).titolo}</center>
         </td>
         <td>
-            <center>${album.get(2).anno}</center>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <center>${album.get(3).titolo}</center>
-        </td>
-
-        <td>
-            <center>${album.get(3).artista}</center>
-        </td>
-
-        <td>
-            <center>${album.get(3).durata}</center>
-        </td>
-
-        <td>
-            <center>${album.get(3).genere}</center>
-        </td>
-        <td>
-            <center>${album.get(3).anno}</center>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <center>${album.get(4).titolo}</center>
-        </td>
-
-        <td>
-            <center>${album.get(4).artista}</center>
-        </td>
-
-        <td>
-            <center>${album.get(4).durata}</center>
-        </td>
-
-        <td>
-            <center>${album.get(4).genere}</center>
-        </td>
-        <td>
-            <center>${album.get(4).anno}</center>
+            <center>${songs.get(2).durata}</center>
         </td>
     </tr>
     </tbody>

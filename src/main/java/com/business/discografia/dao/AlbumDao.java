@@ -15,8 +15,8 @@ public interface AlbumDao {
     public Album modifyAlbumByName (String name, Album album);
 
     // Cancellare un album
-    public int deleteAlbumById (int id);
-    public int deleteAlbumByName (String name);
+    public void deleteAlbumById (int id);
+    public void deleteAlbumByName (String name);
 
     // Visualizzare la lista degli album
     public List<Album> getAlbums();
